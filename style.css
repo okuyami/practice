@@ -1,29 +1,61 @@
+/*このCSSは共通CSSです*/
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap');
+
+html{
+  height:100%;
+  min-width: 1000px;
+  overflow: auto;
+  position: relative;
+  font-family:  'M PLUS 1p', sans-serif;
+}
+
 body {
   font-size: 16px;
   font-family: 'Roboto', 'Arial', sans-serif;
   text-align: center;
   background-color: #f8faff;
 }
-h1 { margin-top:150px;}
+
+.titleimg { 
+  margin: auto;
+  float: left;
+  position: relative;
+}
+
+
+
+/*ボタンのCSS指定ここから*/
 
 .confetti-button {
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Rammetto One', cursive;
   display: inline-block;
-  font-size: 1em;
-  padding: 1em 2em;
-  margin-top: 100px;
-  margin-bottom: 60px;
-  -webkit-appearance: none;
-  appearance: none;
+  font-size: 1rem;
+  margin: 35px 2px;
   background-color: #ff0081;
   color: #fff;
-  border-radius: 4px;
   border: none;
   cursor: pointer;
   position: relative;
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
   box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+  width: 100px;
+  height: 100px;
+  font-size: 14px;
+  border-radius: 100px;
 }
+
+.confetti-button.col-sm-2 {
+  width: 90px;
+  height: 90px;
+  border-radius: 90px;
+}
+
+.confetti-button.col-xs-2 {
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+}
+
 
 .confetti-button:focus { outline: 0; }
 
@@ -39,12 +71,6 @@ h1 { margin-top:150px;}
   background-repeat: no-repeat;
 }
 
-.confetti-button{
-  width: 120px;
-  height: 80px;
-  font-size: 18px;
-  text-align: center;
-}
 
 .confetti-button:before {
   display: none;
@@ -66,6 +92,10 @@ h1 { margin-top:150px;}
   box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
 }
 
+.confetti-button:hover {
+  color: #ffd614;
+}
+
 .confetti-button.animate:before {
   display: block;
   animation: topBubbles ease-in-out 0.75s forwards;
@@ -75,6 +105,7 @@ h1 { margin-top:150px;}
   display: block;
   animation: bottomBubbles ease-in-out 0.75s forwards;
 }
+
  @keyframes
 topBubbles {  0% {
  background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
@@ -99,3 +130,6 @@ bottomBubbles {  0% {
  background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
 }
 }
+
+/*ボタンここまで*/
+
